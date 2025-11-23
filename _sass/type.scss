@@ -42,6 +42,7 @@ h1 {
   padding-bottom: 10px;
   margin-bottom: 40px;
   text-align: center;
+  margin-top: 20px;
 
   @media print {
     margin-bottom: 20px;
@@ -49,19 +50,40 @@ h1 {
 }
 
 h2 {
-  font-weight: 500;
-  font-size: 2.5rem;
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 h3 {
-  font-weight: 400;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 h4 {
   font-weight: 300;
   font-size:2.5rem;
   margin-bottom:3px;
+  margin-top: 20px;
+}
+
+// Remove margin-top when any header follows another header
+@each $header in h1, h2, h3, h4, h5, h6 {
+  @each $next in h1, h2, h3, h4, h5, h6 {
+    #{$header} + #{$next} {
+      margin-top: 0;
+    }
+  }
+}
+
+// Remove margin-top when header is first child in a div
+@each $header in h1, h2, h3, h4, h5, h6 {
+  div > #{$header}:first-child {
+    margin-top: 0;
+  }
 }
 
 p, ul {

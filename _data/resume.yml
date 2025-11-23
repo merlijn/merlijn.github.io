@@ -6,7 +6,7 @@ favicon: images/favicon.ico
 name: Merlijn van Ittersum
 title: Senior Software Engineer
 email: merlijn@mvisoftware.dev
-website: www.mvisoftware.dev
+website: me.mvisoftware.dev
 
 # Dark Mode (true/false/never)
 darkmode: true
@@ -20,7 +20,7 @@ linkedin_username: mvanittersum
 additional_links:
   - title: mvisoftware.dev
     icon: fas fa-globe
-    url: https://mvisoftware.dev
+    url: https://me.mvisoftware.dev
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
@@ -36,7 +36,7 @@ about_content: |
   I am a software engineer with 15+ years of experience building business critical production systems.  
   
   My focus has been mainly on <mark>backend</mark> systems based on the <mark>JVM</mark>. I am
-  most proficient in the <mark>Scala</mark> language but I am no stranger to <mark>Java</mark> or <mark>Kotlin</mark>. When needed
+  most proficient in the <mark>Scala</mark> language but I am no stranger to <mark>Java</mark>. When needed
   I can also be of help in <mark>frontend</mark> development where I most familiar with the <mark>TypeScript</mark> and <mark>React</mark> combination.
   
   Most systems I have worked on have been distributed in nature so I am
@@ -63,16 +63,15 @@ about_content: |
   - Responding to issues reported by automated monitors (preferably) or customers
   - Being "on call" for 24/7 stand by using <mark>PagerDuty<mark>
   
-  <br />
   ## Tech profile
-  **Tier 1** - Daily driver
+  ### Tier 1 (Daily driver)
   
   <mark>Scala</mark>, <mark>git</mark> & <mark>Github</mark>, <mark>Intellij IDEA</mark>, <mark>Linux</mark>, <mark>MacOS</mark>, <mark>Docker</mark>, 
-  <mark>terminal</mark>, <mark>bash</mark> & <mark>zsh</mark>, <mark>ssh</mark>, <mark>Kubernetes</mark>, <mark>Kafka</mark>, <mark>Elastic Search</mark>
+  <mark>terminal</mark>, <mark>bash</mark> & <mark>zsh</mark>, <mark>ssh</mark>, <mark>Kubernetes</mark>, <mark>Kafka</mark>, <mark>Elastic Search</mark>, <mark>Postgres</mark>
   
-  **Tier 2** - Used less frequently but still proficient
+  ### Tier 2 (Proficient)
   
-  <mark>Java</mark>, <mark>Typescript</mark>, <mark>bash scripting</mark>, <mark>helm</mark>, <mark>React</mark>, <mark>Postgres</mark>
+  <mark>Java</mark>, <mark>Typescript</mark>, <mark>React</mark>, <mark>helm</mark>, <mark>nginx</mark>
 
 # Footer
 footer_show_references: true
@@ -90,16 +89,40 @@ sections:
         caption: January 2023 - Present
 
         description: |
+          ## Backend Developer at Team B2X
+          
+          ### Team Responsibilities:
+            - Management of the primary service for label/parcel intake, > 1 million parcels per day. Including 24/7 on-call duty
+            - Management of My DHL Parcel (MDP) portal for business customers
+          
+          ### Tech stack
+          Most of the backend is written in <mark>Scala</mark> using various frameworks such as <mark>akka</mark>, <mark>Play</mark> and <mark>tapir</mark>. A small percentage is using <mark>PHP</mark>.
+          Services deployed on <mark>Kubernetes</mark> hosted on <mark>Azure</mark>, deployed using <mark>Helm</mark> with Azure pipelines.
+          
+          The frontend stack is <mark>Typescript</mark> with <mark>React</mark>. Assets hosted by <mark>Cloudflare</mark> workers.
+          
+          Other components and technologies used:
+          <mark>Elastic Search</mark>, <mark>Kafka</mark>, <mark>Postgres</mark>
+          
+          ### Way of working
+          Local flavour of Scrum/kanban with sprints of 3 weeks. Retro's, refinements. PR reviews.
+          
           ## Projects
-          **Migrate all service from MesOS to Kubernetes**
           
-          <mark>Kubernetes</mark> was selected as the new target platform for all services. This was a large project that took about 6 months.
+          ### Numerous migration projects, the largest of which were:
+            - All services (30+) migrated from <mark>MesOS</mark> to <mark>Kubernetes</mark>. Long project (> 6 months)
+            - <mark>Kafka</mark> on-premise migrated to Confluent Cloud
+            - Approximately 10 <mark>Postgres</mark> databases migrated to Azure Postgres Flexible Server
           
-          **Migrate all databases to Postgres Flexible Server from Azure**
+          ### Notable features developed
+            - Matrix barcodes on labels for improved scannability
+            - Account managers feature in MDP
+            - Upgrade the Direct Print Desktop application to support OS native printer drivers
+            - Integrating the support system with an <mark>AI</mark> chatbot
           
-          **Migrate the observability stack to Datadog**
-          
-          **Migrate all kafka topics to Confluent Cloud**
+          ### Technical improvements:
+            - Contract-first approach for communication using <mark>OpenAPI</mark> specs (for FE) and <mark>gRPC</mark> (BE)
+            - <mark>Observability</mark>, improved monitoring & alerting on critical systems and data flows
 
       - layout: left
         title: Marktplaats
