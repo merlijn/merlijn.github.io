@@ -9,7 +9,7 @@ email: merlijn@mvisoftware.dev
 website: www.mvisoftware.dev
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: true
 
 # Social links
 #twitter_username: facespics
@@ -46,15 +46,15 @@ about_content: |
   - Cloud platforms to host these systems, in order of most familiarity: <mark>Azure</mark>, <mark>AWS</mark>, <mark>GCE</mark>
   - Building automated pipelines for <mark>Continuous delivery</mark> on various platforms such as <mark>Azure</mark> pipelines, <mark>Github Actions</mark> and <mark>Jenkins</mark>
   - Using techniques such as <mark>CQRS</mark>, sharding and caching to scale systems to handle large traffic volumes.
-  - Distributed search engines. Mainly <mark>Elastic Search</mark> but also <mark>Solr</mark>
+  - Storing data in databases: <mark>Postgres</mark>, <mark>MySQL</mark> and <mark>Cassandra</mark> as well as search engines, mainly <mark>Elastic Search</mark> but also <mark>Solr</mark>
   - Message bus systems such as <mark>Kafka</mark> and queue systems such as <mark>RabbitMq</mark>
   
   As well as more technical aspects such as
 
-  - CAP theorem and its implications in practice
+  - <mark>CAP</mark> theorem and its implications in practice
   - Distributed state and it's challenges, such as preventing split brain
   - Dealing with systems that maintain their own cluster state (<mark>Akka</mark>)
-  - ACID vs eventual consistency models such as CRDTs
+  - Different consistency models: <mark>ACID</mark> vs eventual consistency models such as <mark>CRDT</mark>s
   - Event sourcing
   
   Additionally, the principle "you build it you own it" has always applied for the code that I have written. Meaning I have always been responsible to maintain and operate systems as well. This comes with additional challenges
@@ -207,11 +207,11 @@ sections:
           ## Mobile Onboarding
           *April 2016 – December 2018*
           
-          Development of the backend for the Mobile Onboarding project. Allowing customers to onboard themselves using their mobile phone.
+          After two POCs we were given the opportunity to develop the backend for the Mobile Onboarding project. This project would allow customers to onboard and open a bank account at ING themselves using only their mobile phone. 
           
           <https://www.ing.nl/particulier/betalen/bankrekeningen/mobiel-rekeningopenen/index.html>
           
-          During this time the Baker process orchestration library was developed to
+          I was involved in this project from start to finish. During this time the Baker process orchestration library was developed to
           cope with the complex and often changing business process. It was open sourced after some time at:
           
           <https://www.github.com/ing-bank/baker>
@@ -224,8 +224,7 @@ sections:
           **My role**
           
           My main focus was the design and development of the Baker library
-          although I also contributed to the Mobile onboarding project
-          which the library served.
+          although I also contributed to the Mobile onboarding project which the library served.
           
           **Way of working**
           
@@ -241,14 +240,14 @@ sections:
           ## Scala POC 2
           *Oktober 2015 - March 2016*
           
-          Re-building a critical service with high scalability and resilience requirements using the Scala / Akka stack.
+          Re-building a critical service with high scalability and resilience requirements using the <mark>Scala</mark> and <mark>Akka</mark> stack.
           
           <br />
           
           ## Scala POC 1
           *June 2015 - September 2015*
           
-          A POC using the <mark>Scala</mark> / <mark>Akka</mark> stack to prove the technology is mature and
+          A POC using <mark>Scala</mark> and <mark>Akka</mark> to prove the technology is mature and
           satisfies all requirements to deploy in production at the ING bank.
 
       - layout: left
@@ -262,7 +261,7 @@ sections:
           
           A new platform developed from the ground up for Wehkamp BE.
           Envisioned to later replace the .NET based architecture of Wehkamp NL.
-          Based around a micro service architecture and hosted in the cloud (Amazon AWS) following the principles from the reactive manifesto:
+          Based around a micro service architecture and hosted on <mark>AWS</mark> following the principles from the reactive manifesto:
           responsive, resilient, message driven & elastic.
           
           **My role**
@@ -278,7 +277,7 @@ sections:
           **Applied methods**
           - Micro service architecture
           - Actor systems using <mark>Akka</mark>
-          - Functional programming, event sourcing & CQRS
+          - Functional programming, event sourcing & <mark>CQRS</mark>
           - REST APIs
           - Private cloud deployment on <mark>Mesos</mark> / <mark>Marathon</mark>
           

@@ -18,7 +18,7 @@
 
       {% for section in site.data.resume.sections %}
         <div class="container {{ section.layout }}-container">
-          <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
+          <h1 id="{{ section.title | slugify }}">{{ section.title }}</h1>
           {% include {{ section.layout | prepend: "section-" | append: ".html" }} content=section.content %}
         </div>
       {% endfor %}
