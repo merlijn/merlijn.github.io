@@ -1,0 +1,354 @@
+# Site
+repository: merlijn/resume
+favicon: images/favicon.ico
+
+# Personal info
+name: Merlijn van Ittersum
+title: Senior Software Engineer
+email: merlijn@mvisoftware.dev
+website: www.mvisoftware.dev
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
+#twitter_username: facespics
+github_username:  merlijn
+linkedin_username: mvanittersum
+
+# Additional icon links
+additional_links:
+  - title: mvisoftware.dev
+    icon: fas fa-globe
+    url: https://mvisoftware.dev
+
+# Google Analytics and Tag Manager
+# Using more than one of these may cause issues with reporting
+# gtm: "GTM-0000000"
+# gtag: "UA-00000000-0"
+# google_analytics: "UA-00000000-0"
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: |
+  ## Introduction
+  I am a software engineer with 15+ years of experience building business critical production systems.  
+  
+  My focus has been mainly on <mark>backend</mark> systems based on the <mark>JVM</mark>. I am
+  most proficient in the <mark>Scala</mark> language but I am no stranger to <mark>Java</mark> or <mark>Kotlin</mark>. When needed
+  I can also be of help in <mark>frontend</mark> development where I most familiar with the <mark>TypeScript</mark> and <mark>React</mark> combination.
+  
+  Most systems I have worked on have been distributed in nature so I am
+  very familiar with challenges in this domain. My experience includes:
+  
+  - Managing distributed systems using <mark>Kubernetes</mark> or <mark>Nomad</mark>
+  - Cloud platforms to host these systems, in order of most familiarity: <mark>Azure</mark>, <mark>AWS</mark>, <mark>GCE</mark>
+  - Building automated pipelines for <mark>Continuous delivery</mark> on various platforms such as <mark>Azure</mark> pipelines, <mark>Github Actions</mark> and <mark>Jenkins</mark>
+  - Using techniques such as <mark>CQRS</mark>, sharding and caching to scale systems to handle large traffic volumes.
+  - Distributed search engines. Mainly <mark>Elastic Search</mark> but also <mark>Solr</mark>
+  - Message bus systems such as <mark>Kafka</mark> and queue systems such as <mark>RabbitMq</mark>
+  
+  As well as more technical aspects such as
+
+  - CAP theorem and its implications in practice
+  - Distributed state and it's challenges, such as preventing split brain
+  - Dealing with systems that maintain their own cluster state (<mark>Akka</mark>)
+  - ACID vs eventual consistency models such as CRDTs
+  - Event sourcing
+  
+  Additionally, the principle "you build it you own it" has always applied for the code that I have written. Meaning I have always been responsible to maintain and operate systems as well. This comes with additional challenges
+  
+  - Gaining insights into systems and being able to debug them through <mark>observability</mark> stacks (<mark>logs</mark>, <mark>metrics</mark>, <mark>traces</mark>). Most notably ELK and <mark>Datadog</mark>
+  - Responding to issues reported by automated monitors (preferably) or customers
+  - Being "on call" for 24/7 stand by using <mark>PagerDuty<mark>
+  
+  <br />
+  ## Tech profile
+  **Tier 1** - Daily driver
+  
+  <mark>Scala</mark>, <mark>git</mark> & <mark>Github</mark>, <mark>Intellij IDEA</mark>, <mark>Linux</mark>, <mark>MacOS</mark>, <mark>Docker</mark>, 
+  <mark>terminal</mark>, <mark>bash</mark> & <mark>zsh</mark>, <mark>ssh</mark>, <mark>Kubernetes</mark>, <mark>Kafka</mark>, <mark>Elastic Search</mark>
+  
+  **Tier 2** - Used less frequently but still proficient
+  
+  <mark>Java</mark>, <mark>Typescript</mark>, <mark>bash scripting</mark>, <mark>helm</mark>, <mark>React</mark>, <mark>Postgres</mark>
+
+# Footer
+footer_show_references: true
+
+sections:
+  - title: Work Experience
+    layout: list
+    content:
+
+      - layout: left
+        title: DHL
+        link: dhl.com
+        logo: images/dhl-logo.png
+        sub_title: Senior Backend Software Engineer (Freelance)
+        caption: January 2023 - Present
+
+        description: |
+          ## Projects
+          **Migrate all service from MesOS to Kubernetes**
+          
+          <mark>Kubernetes</mark> was selected as the new target platform for all services. This was a large project that took about 6 months.
+          
+          **Migrate all databases to Postgres Flexible Server from Azure**
+          
+          **Migrate the observability stack to Datadog**
+          
+          **Migrate all kafka topics to Confluent Cloud**
+
+      - layout: left
+        title: Marktplaats
+        link: marktplaats.nl
+        logo: images/marktplaats-logo.png
+        sub_title: Senior Backend Software Engineer (Freelance)
+        caption: November 2020 - December 2022
+        description: |
+          ## Overview
+          
+          I joined Marktplaats during a time of reorganization. The reason for this was that the company was sold off to Adevinta by Ebay classifieds group.
+          I experienced both the end of eBay and the start of Adevinta. Because of these hectic times I was part of 3 different teams (see below).
+          
+          **General way of working in all teams**
+          
+          Local flavor of scrum/kanban, ticket system using epics & stories, agile, dev-ops with on-call, git-flow using feature branches, PR reviews
+          
+          **Common tech stack of the platform**
+          
+          - *Backend services* : Mostly JVM using <mark>Scala</mark> with some parts still in <mark>Java</mark>.
+          - *Persistence*: A mix of <mark>MySQL</mark>, <mark>Cassandra</mark>, <mark>CockroachDB</mark> and <mark>ElasticSearch</mark> for search.
+          - *Communication protocols*: <mark>Thrift</mark> for internal, <mark>HTTP</mark> for external, <mark>Kafka</mark> for async message delivery, RabbitMq for traditional queue requirements
+          - *Frontend*: TypeScript / React with some parts still in vanilla Javascript
+          - *Deployment pipeline*: Jenkins for building and Nomad (on private cloud) for deployment with some homegrown tooling around it.
+          - *Developer tooling*: GitHub Enterprise, Jira, mix of maven & sbt, docker
+
+          <br />
+          ## Trust, safety & support team
+          *November 2021 – December 2022*
+          
+          This team was responsible for maintaining services related to identity
+          (login, account creation, 2FA, etc…) as well as customer support tooling.
+          
+          **My role**
+          
+          Senior developer contributing to mostly the backend but also frontend.
+          Main contributions:
+          - A new customer support tool written in a modern tech stack (<mark>TypeScript/React</mark> frontend and <mark>Scala</mark> on backend) to replace an
+            old legacy application still running as .war on bare metal on a servlet container.
+          - Various anti-fraud measures on the backend.
+          
+          <br />
+          ## Platform modernisation team
+          *May 2021 – November 2021*
+          
+          This team’s purpose was to ‘modernize’ the backend platform. It was later
+          disbanded because of reorganization.
+          
+          **My role**
+          
+          Senior backend developer
+          
+          **Main contributions**
+          
+          - Helping to finish up a database migration project (switching from <mark>MySQ</mark> to <mark>Cassandra</mark>)
+          - Implement cleanup of dormant (unused) accounts as part of GDPR. This means that accounts inactive for a long period will be deleted.
+          
+          <br />
+          ## Platform project team
+          *December 2020 – May 2021*
+          
+          This team’s purpose was to pick up big projects to improve the platform. It
+          was later disbanded because of reorganization.
+          
+          **My role**
+          Senior backend developer
+          
+          **Main contributions**
+          - Helping on the backend side to finish up a big rewrite of part of the frontend.
+          - Mapping out a potential big migration project regarding identity (login, 2FA, account creation, etc…)
+
+      - layout: left
+        title: Sabbatical
+        logo: images/sabbatical.jpg
+        caption: May 2019 - November 2020
+        description: |
+
+          After 10 years of working in IT I felt the urge to take a break for a while. I
+          did take some time in the beginning to familiarize myself with Kubernetes
+          which had caught my attention during my last project.
+          Beyond that I traveled around a lot and basically let go of the idea of work
+          for a while. A sabbatical is a very fortunate thing that not many people
+          have the opportunity to experience. I am grateful to have had this time for
+          myself.
+
+      - layout: left
+        title: Trivento
+        link: trivento.nl
+        logo: images/trivento.png
+        caption: December 2014 - May 2019
+        description: |
+          ## Consultancy at Trivento
+          I applied at Trivento with a wish to apply the <mark>Scala</mark> programming
+          language which, at that point, I was not very experienced with. They
+          successfully found me projects at Wehkamp and ING (see below).
+          I had a very good time here and learned a lot but after almost 5 years I decided 
+          to take a break and go freelance.
+
+      - layout: left
+        title: ING
+        link: ing.nl
+        logo: images/ing-trivento.png
+        caption: June 2015 - December 2018
+        description: |
+          ## Mobile Onboarding
+          *April 2016 – December 2018*
+          
+          Development of the backend for the Mobile Onboarding project. Allowing customers to onboard themselves using their mobile phone.
+          
+          <https://www.ing.nl/particulier/betalen/bankrekeningen/mobiel-rekeningopenen/index.html>
+          
+          During this time the Baker process orchestration library was developed to
+          cope with the complex and often changing business process. It was open sourced after some time at:
+          
+          <https://www.github.com/ing-bank/baker>
+          
+          This library is built in <mark>Scala</mark> using <mark>Akka</mark> (including clustering, persistence &
+          sharding). Petri nets were chosen for the underlying execution semantics because of
+          its simplicity, mathematical foundation and personal experience with the
+          concept.
+          
+          **My role**
+          
+          My main focus was the design and development of the Baker library
+          although I also contributed to the Mobile onboarding project
+          which the library served.
+          
+          **Way of working**
+          
+          Small team (3 developers), Kanban, agile, dev-ops, PRs & code reviews
+          
+          **Tools used:**
+          <mark>Docker</mark>, <mark>Git</mark>, <mark>Gitlab</mark>, <mark>Maven</mark>, <mark>Sbt</mark>
+          <mark>akka</mark>, <mark>cats</mark>, <mark>fs2</mark>, <mark>scalacheck</mark>
+          <mark>Kafka</mark>, <mark>cassandra</mark>, <mark>jenkins</mark>
+          
+          <br />
+          
+          ## Scala POC 2
+          *Oktober 2015 - March 2016*
+          
+          Re-building a critical service with high scalability and resilience requirements using the Scala / Akka stack.
+          
+          <br />
+          
+          ## Scala POC 1
+          *June 2015 - September 2015*
+          
+          A POC using the <mark>Scala</mark> / <mark>Akka</mark> stack to prove the technology is mature and
+          satisfies all requirements to deploy in production at the ING bank.
+
+      - layout: left
+        title: Wehkamp
+        link: wehkamp.nl
+        logo: images/trivento-wehkamp.png
+        caption: January 2015 - June 2015
+        description: |
+          ## Blaze
+          *January 2015 – June 2015*
+          
+          A new platform developed from the ground up for Wehkamp BE.
+          Envisioned to later replace the .NET based architecture of Wehkamp NL.
+          Based around a micro service architecture and hosted in the cloud (Amazon AWS) following the principles from the reactive manifesto:
+          responsive, resilient, message driven & elastic.
+          
+          **My role**
+          
+          Developer in a feature team. Responsible, as a team, for the design/
+          development/testing/deployment & maintenance of a few micro services.
+          The main focus was on the <mark>Scala</mark> backend but features sometimes also
+          touched on the frontend which was written in <mark>AngularJS</mark>.
+          
+          **Way of working**
+          SCRUM, agile, dev-ops, Gitflow (PRs & code reviews)
+          
+          **Applied methods**
+          - Micro service architecture
+          - Actor systems using <mark>Akka</mark>
+          - Functional programming, event sourcing & CQRS
+          - REST APIs
+          - Private cloud deployment on <mark>Mesos</mark> / <mark>Marathon</mark>
+          
+          **Tools used**
+          Git, Github, Scala, sbt, Javascript
+          akka, spray, scalaz, AngularJS (1.x)
+          Bamboo, ansible, docker, mesos / marathon, amazon AWS
+
+      - layout: left
+        title: Stream
+        link: streamconsulting.nl
+        logo: images/stream.png
+        caption: July 2009 - September 2014
+        description: |
+          ## Statebox
+          *September 2009 - September 2014*
+          
+          Long running project that was the core of a SAAS solution by Stream B.V.
+          of which Econosto and Dienst Justitiële Inrichtingen (DJI) at that time were the most
+          important clients.
+          
+          This product involved a low latency process engine based on
+          petri nets which was tightly coupled with <mark>Drupal</mark>, which hosted all
+          the business data of the process cases. A backend service in <mark>Java</mark> managed
+          the process flow and a frontend written in <mark>GWT</mark> (java compiled to
+          javascript) could be used to investigate process cases and their state and
+          act on them.
+          
+          **My role**
+          First co-developer, then project lead (from 2011), small team 2-3 devs.
+          
+          Way of working
+          Loose kanban style.
+          
+          **Most important contributions**
+          - A petri net extension system (arc-inhibitors, type restrictions)
+          - A Test platform with DSL
+          - A Scheduler/execution engine
+          - An immutable/persistent collection library for Java
+
+  - title: Education
+    layout: list
+    content:
+      - layout: left
+        title: Universiteit van Amsterdam
+        caption: 2007-2009
+        sub_title: Master Artificial Intelligence
+        description: |
+          WO, Master Artificial Intelligence (Universiteit van Amsterdam)
+          Unfinished because of a full time job at the “Stream B.V.” start-up
+
+      - layout: left
+        title: Erasmus Universiteit Rotterdam
+        caption: 2002-2006
+        sub_title: Bachelor Informatica & Economie
+        description: |
+          WO, Bachelor Informatica & Economie (Erasmus Universiteit Rotterdam)
+          Diploma received in May 2006
+
+      - layout: left
+        title: Goudse Scholen Gemeenschap (Gouda)
+        caption: 1995-2001
+        sub_title: VWO
+        description: |
+          Diploma received in June 2001
+
+  - title: A Little More About Me
+    layout: text
+    content: |
+      Besides software engineering I have a few other hobbies:
+      - Running
+      - Hiking
+      - Guitar playing
